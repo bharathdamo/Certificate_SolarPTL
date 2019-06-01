@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--style='height: 100%; width: 100%; object-fit: contain'-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+.containerxx {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.containerxx:hover .image {
+  opacity: 0.3;
+}
+
+.containerxx:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: transparent;
+  color: black;
+  font-size: 18px;
+  padding: 16px 32px;
+}
+{#search style start#}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #00B4CC;
+  padding: 5px;
+  height: 35px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  position: absolute;
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 40%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+{#search style ends        #}
+
+{#Three columns start#}
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+{#text over image#}
+.centeree {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+{#Three column end        #}
+
+
+</style>
+
+    <link rel="shortcut icon" type="image/png" href="http://ffutcheo.wwwss47.a2hosted.com/ffutche_foundation/homepage/static/favicon.ico"/>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" type="text/css" href="http://ffutcheo.wwwss47.a2hosted.com/ffutche_foundation/homepage/static/homepage/style.css" />
+
+    <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-102138286-1', 'auto');
+         ga('send', 'pageview');
+    </script>
+
+    <title>
+
+    SolarPTL - Performance Certificates
+
+    </title>
+</head>
+<body>
+{% url 'performance' as performance %}
+{% url 'safety' as safety %}
+{% url 'personnel' as personnel %}
+{% url 'home' as home %}
+
+    <div class="container" style="width: 75%; position:relative;">
+
+        <!-- NAVBAR START  background: linear-gradient(lightyellow, lightblue); -->
+        <div class="row" style="background:white ">
+            <!-- LOGO -->
+            <div class="col-md-4 thumbnail" id="logo-frame" style="background-color: white;position: relative; border: none !important;">
+                <a href={{ about }} class="navbar-left"><img id="logo" src="https://solarptl.com/wp-content/uploads/2018/11/test_blue_sun_2-1.png"
+                style="height:85px; width:470px ;" ></a>
+            </div>
+
+            <div class="col-md-8">
+
+                <div class="row" style="padding-top: 5px;">
+
+                    <ul class="navbar-right list-inline" id="top-link-bar">
+                         <li role="presentation"><a href="https://solarptl.com"><span class="glyphicon glyphicon-home"></span>&nbsp;SolarPTL Home</a></li>
+                        <li role="presentation"><a href="https://solarptl.com/about/"><span class="fa fa-university"></span>&nbsp;About Us</a></li>
+                        <li role="presentation"><a href="https://solarptl.com/contact-us/"><span class="fa fa-phone-square"></span>&nbsp;Contact Us</a></li>
+
+{#                         <a class="btn btn-primary" href="donate" role="button">&nbsp; Sign In</a>#}
+                        <!-- <li></li> -->
+
+
+                    </ul>
+                </div>
+
+                 <div class="row">
+                    <div class="col-md-9 text-center">
+
+                        <h3 id="tagline" style="display: inline;color: black"> Certificate Database    </h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+                </div>
+                    </div>
+                <!-- Middle 2 Items -->
+
+
+
+                <br>
+
+
+            </div>
+        </div>
+
+        <!-- NAVBAR START -->
+
+
+        <!-- Secondary main menu -->
+        <div class="row" style="background:white">
+            <!-- Static navbar -->
+            <nav class="navbar navbar-inverse" id="second-navbar">
+                <div id="navbar" class="navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        {% url 'home' as home %}
+                        <li><a href={{ home }}><span class="fa fa-home"></span>&nbsp; Home</a></li>
+
+
+                        <li><a href={{ performance }}><span class="glyphicon glyphicon-certificate"></span>&nbsp; Performance Certificate</a></li>
+                         <li><a href={{ safety }}><span class="glyphicon glyphicon-fire"></span>&nbsp; Safety Certificate</a></li>
+                        <li><a href={{ personnel }}><span class="glyphicon glyphicon-user"></span>&nbsp;Personnel Certificate</a></li>
+
+                    </ul>
+                </div>
+
+                <!--/.nav-collapse -->
+{#                <div>#}
+{##}
+{#                    <img src="http://gdurl.com/Vz7f" style="height: 100%; width: 100%">#}
+{#                </div>#}
+                </nav>
+
+                <!--carousel div-->
+            <div>
+                   <br/>
+                   <br/>
+                   <p>
+                       What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+
+                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages
+
+                   </p>
+               </div>
+
+
+
+
+            <br/>
+
+
+
+
+   <div class="row" style="background-color: white; position: relative">
+
+
+{#    search bar starts#}
+<div class="wrap">
+   <div class="search">
+       <form action="javascript:searchfunc()">
+      <input type="text" id="search_query" class="searchTerm" required placeholder="Please enter certificate number or certificate holder name" onkeydown = "if (event.keyCode == 13) document.getElementById('btn_search').click()" >
+      <button type="submit" class="searchButton" id="btn_search">
+        <i class="fa fa-search"></i>
+     </button>
+           </form>
+
+   </div>
+</div>
+{#            search bar ends#}
+
+    </div>
+            <script>
+                function searchfunc() {
+                    var table = document.getElementById("result_table");
+
+
+                    var x = document.getElementById('search_query').value;
+                    x = x.toLowerCase();
+                    var result = [];
+                    switch (x) {
+                        case "jose":
+                            result.push("jose cano");
+                            break;
+                        case "cano":
+                            result.push("jose cano");
+                            break;
+                        case "jose cano":
+                            result.push("jose cano");
+                            break;
+                        case "jerry":
+                            result.push("jerry novacek");
+                            break;
+                        case "novacek":
+                            result.push("jerry novacek");
+                            break;
+                        case "jerry novacek":
+                            result.push("jerry novacek");
+                            break;
+                        case "andrew":
+                            result.push("Andrew Gunnoe");
+                            break;
+                        case "gunnoe":
+                            result.push("Andrew Gunnoe");
+                            break;
+                        case "andrew gunnoe":
+                            result.push("Andrew Gunnoe");
+                            break;
+                        case "todd arends":
+                            result.push("Todd Arends");
+                            break;
+                        case "todd":
+                            result.push("Todd Arends");
+                            break;
+                        case "arends":
+                            result.push("Todd Arends");
+                            break;
+                        case "john castagna":
+                            result.push("John Castagna");
+                            break;
+                        case "john":
+                            result.push("John Castagna");
+                            break;
+                        case "castagna":
+                            result.push("John Castagna");
+                            break;
+                        case "kamerine kroner":
+                            result.push("Kamerine Kroner");
+                            break;
+                        case "kroner":
+                            result.push("Kamerine Kroner");
+                            break;
+                        case "kamerine":
+                            result.push("Kamerine Kroner");
+                            break;
+
+
+
+
+
+
+                        case "bo":
+                            result.push("bo li");
+                            break;
+                        case "li":
+                            result.push("bo li");
+                            break;
+                        case "bo li":
+                            result.push("bo li");
+                            break;
+                        case "us 82150003 01":
+                            result.push("us 82150003 01")
+                            break;
+                        case "us 82150007 01":
+                            result.push("us 82150007 01")
+                            break;
+                        case "us 82150013 01":
+                            result.push("us 82150013 01")
+                            break;
+                        case "us 82150016 01":
+                            result.push("us 82150016 01")
+                            break;
+                        case "us 82170032 01":
+                            result.push("us 82170032 01")
+                            break;
+
+
+                        default:
+                            result.push("none");
+                            break;
+
+
+                    }
+                     document.getElementById('temp').innerHTML="";
+                    var rowCount =result_table.rows.length;
+                    for (var i = rowCount - 1; i > 0; i--) {
+                        result_table.deleteRow(i);
+                    }
+                    if(result[0]=="none"){
+                        document.getElementById('result_tab').style.display = "none";
+                        document.getElementById('temp').innerHTML='No records found for "'+x+'" !';
+
+
+                    }
+                    else{
+                        document.getElementById('temp1').innerHTML='Search results for "'+x+'"';
+                        document.getElementById('result_tab').style.display = "block";
+
+                        for (var i = 0; i < result.length; i++) {
+
+  var row = table.insertRow(1);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
+
+  if(result[0]=='us 82150003 01')
+  {
+       {#cell1.innerHTML = '<a href="{% url 'cert' %}?x=1">'+ result[0] +'</a>';#}
+       cell2.innerHTML = "USA";
+        cell3.innerHTML = "234ASRE";
+       cell4.innerHTML = "solar panels";
+       cell5.innerHTML = "2014 model";
+       cell6.innerHTML = ""
+
+  }
+else if(result[0]=='us 82150007 01')
+  {
+       {#cell1.innerHTML = '<a href="{% url 'cert' %}?x=2">'+ result[0] +'</a>';#}
+       cell2.innerHTML = "USA";
+        cell3.innerHTML = "234ASRE";
+       cell4.innerHTML = "solar panels";
+       cell5.innerHTML = "2014 model";
+       cell6.innerHTML = "";
+
+  }
+  else if(result[0]=='us 82150013 01')
+  {
+       {#cell1.innerHTML = '<a href="{% url 'cert' %}?x=3">'+ result[0] +'</a>';#}
+       cell2.innerHTML = "USA";
+        cell3.innerHTML = "234ASRE";
+       cell4.innerHTML = "solar panels";
+       cell5.innerHTML = "2014 model";
+       cell6.innerHTML = "";
+
+  }
+ else if(result[0]=='us 82150016 01')
+  {
+       {#cell1.innerHTML = '<a href="{% url 'cert' %}?x=4">'+ result[0] +'</a>';#}
+       cell2.innerHTML = "USA";
+        cell3.innerHTML = "234ASRE";
+       cell4.innerHTML = "solar panels";
+       cell5.innerHTML = "2014 model";
+       cell6.innerHTML = "";
+
+  }
+ else if(result[0]=='us 82170032 01')
+  {
+       {#cell1.innerHTML = '<a href="{% url 'cert' %}?x=5">'+ result[0] +'</a>';#}
+       cell2.innerHTML = "USA";
+        cell3.innerHTML = "234ASRE";
+       cell4.innerHTML = "solar panels";
+       cell5.innerHTML = "2014 model";
+       cell6.innerHTML = "";
+
+  }
+  else{
+      cell1.innerHTML = '<a href="{{ personnel }}">'+ result[0] +'</a>';
+  cell2.innerHTML = "USA";
+  cell3.innerHTML = "234ASRE";
+  cell4.innerHTML = "solar panels";
+  cell5.innerHTML = "2014 model";
+  cell6.innerHTML = "";
+  }
+
+}
+                    }
+
+
+}
+
+            </script>
+            <h2 id="temp" style="text-align: center"></h2>
+            <div id="result_tab" style="display: none" >
+                <br/>
+                <h4 id="temp1" style="text-align: center"></h4>
+                <table id="result_table" align="center" style="border-collapse: separate; border-spacing: 50px;" >
+                    <thead>
+                    <tr>
+                        <th >Certificate Holder</th>
+                <th>Country</th>
+              <th>Certificate Type</th>
+              <th>Product Type</th>
+              <th>Model Name</th>
+              <th>Details</th>
+                    </tr>
+                    </thead>
+
+                </table>
+
+            </div>
+            <br/>
+            <br/>
+            <br/>
+
+
+
+</div>
+    </div>
+<br/>
+<br/>
+<div class="content-box">
+  <div class="certificate">
+    <table style="align-content: center;" align="center" border="1px thin single black collapse" width="50%">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td><strong>License Holder: </strong></td>
+            <td>
+               <br/> IUSASOL SA de CV<br/><br/> Av. Paseo de la Reforma 2608, P.H., <br/> Col. Lomas Altas, <br/>Del. Miguel Hidalgo<br/>11950 Mexico D.F.<br/>Mexico
+
+
+            </td>
+          </tr>
+
+        <tr>
+          <td><strong>Certificate Number: </strong></td>
+          <td><br/>US 82150003 01<br/><br/></td>
+        </tr>
+          <tr>
+          <td><strong>Manufacturing Plant: </strong></td>
+          <td>IUSASOL SA de CV<br/><br/>Km. 109 Carr. Panamericana Mex-Qro<br/>50700 Jocotitlan <br/>Mexico<br/></td>
+        </tr>
+          <tr>
+            <td><strong>Test Report Number:</strong></td>
+            <td><br/>USA-BL 31440031 001<br/></td>
+          </tr>
+        <tr>
+          <td><strong>Certified Product: </strong></td>
+          <td>
+              <br/>
+           Flat-Plate Photovoltaic Modules
+              <br/><br/>
+          </td>
+        </tr>
+           <tr>
+            <td><strong>Fulfilled Standards: </strong></td>
+            <td>NA</td>
+          </tr>
+        <tr>
+          <td><strong>Date of Issue: </strong></td>
+          <td><br/>
+                February 19, 2015
+              <br/><br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td width="25%"><strong>Certificate Type: </strong></td>
+          <td><br/> NA<br/><br/></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<br/>
+    <br/>
+    <hr/>
+
+</div>
+<!-- Footer -->
+       <footer style="align-content: center; padding: 10px; ">
+            <p style="text-align: center"><a href="/homepage/site_map"> Site Map</a> &#124; <a href="/homepage/terms_conditions">Terms &amp; Conditions</a> &#124; <a href="/homepage/privacy">Privacy Policy</a> &#124; Copyright &copy; 2019</p>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,407 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--style='height: 100%; width: 100%; object-fit: contain'-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+.containerxx {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.containerxx:hover .image {
+  opacity: 0.3;
+}
+
+.containerxx:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: transparent;
+  color: black;
+  font-size: 18px;
+  padding: 16px 32px;
+}
+search style start
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #00B4CC;
+  padding: 5px;
+  height: 35px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  position: absolute;
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 40%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+search style ends        
+
+Three columns start
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+text over image
+.centeree {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+Three column end        
+  Shaded stripe table start
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  padding: 15px;
+    font-size: 20px;
+}
+td {
+  text-align: left;
+  padding: 20px;
+    font-size: 14px;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+        shaded stripe table ends
+
+
+</style>
+
+    <link rel="shortcut icon" type="image/png" href="http://ffutcheo.wwwss47.a2hosted.com/ffutche_foundation/homepage/static/favicon.ico"/>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" type="text/css" href="http://ffutcheo.wwwss47.a2hosted.com/ffutche_foundation/homepage/static/homepage/style.css" />
+
+    <script>
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+         ga('create', 'UA-102138286-1', 'auto');
+         ga('send', 'pageview');
+    </script>
+
+    <title>
+        Safety Certificate - US 82150003.01
+
+    </title>
+</head>
+<body>
+
+{% url 'performance' as performance %}
+{% url 'safety' as safety %}
+{% url 'personnel' as personnel %}
+{% url 'home' as home %}
+
+
+    <div class="container" style="width: 75%; position:relative;">
+
+        <!-- NAVBAR START  background: linear-gradient(lightyellow, lightblue); -->
+        <div class="row" style="background-color: white ">
+            <!-- LOGO -->
+            <div class="col-md-4 thumbnail" id="logo-frame" style="background-color: white;position: relative; border: none !important;">
+                <a href={{ about }} class="navbar-left"><img id="logo" src="https://solarptl.com/wp-content/uploads/2018/11/test_blue_sun_2-1.png"
+                style="height:85px; width:470px ;" ></a>
+            </div>
+
+            <div class="col-md-8">
+
+                <div class="row" style="padding-top: 5px;">
+
+                    <ul class="navbar-right list-inline" id="top-link-bar">
+                         <li role="presentation"><a href="https://solarptl.com"><span class="glyphicon glyphicon-home"></span>&nbsp;SolarPTL Home</a></li>
+                        <li role="presentation"><a href="https://solarptl.com/about/"><span class="fa fa-university"></span>&nbsp;About Us</a></li>
+                        <li role="presentation"><a href="https://solarptl.com/contact-us/"><span class="fa fa-phone-square"></span>&nbsp;Contact Us</a></li>
+
+                         <a class="btn btn-primary" href="donate" role="button">&nbsp; Sign In</a>
+                        <!-- <li></li> -->
+
+
+                    </ul>
+                </div>
+
+                 <div class="row">
+                    <div class="col-md-9 text-center">
+
+                        <h3 id="tagline" style="display: inline;color: black"> Certificate Database    </h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+                </div>
+                    </div>
+                <!-- Middle 2 Items -->
+
+
+
+                <br>
+
+
+            </div>
+        </div>
+
+        <!-- NAVBAR START -->
+
+
+        <!-- Secondary main menu -->
+        <div class="row" style="background:white">
+            <!-- Static navbar -->
+            <nav class="navbar navbar-inverse" id="second-navbar">
+                <div id="navbar" class="navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        {% url 'home' as home %}
+                        <li><a href={{ home }}><span class="fa fa-home"></span>&nbsp; Home</a></li>
+
+
+                        <li><a href={{ performance }}><span class="glyphicon glyphicon-certificate"></span>&nbsp; Performance Certificate</a></li>
+                         <li><a href={{ safety }}><span class="glyphicon glyphicon-fire"></span>&nbsp; Safety Certificate</a></li>
+                        <li><a href={{ personnel }}><span class="glyphicon glyphicon-user"></span>&nbsp;Personnel Certificate</a></li>
+
+                    </ul>
+                </div>
+
+                <!--/.nav-collapse -->
+{#                <div>#}
+{##}
+{#                    <img src="http://gdurl.com/Vz7f" style="height: 100%; width: 100%">#}
+{#                </div>#}
+                </nav>
+
+<br/>
+
+            <div>
+
+                <!-- certificate starts -->
+				<div id="content">
+                            <div class="content-sub content-sub-first">
+
+                                <h3>Certificate No. {{ cert.certific_no }}</h3>
+                            </div>
+
+
+
+<br/>
+
+<div class="content-box">
+  <div class="certificate">
+
+    <table style="align-content: center;" align="center" border="1px thin single black collapse" width="50%">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      <div>
+
+
+
+
+
+
+
+{# Title: {{ t.number }}#}
+{#      </div>#}
+{##}
+{##}
+{# Title: {{ t.number }}#}
+
+
+          <tr>
+            <td style="text-align: center"><strong> Certificate Holder: </strong></td>
+            <td style="text-align: center">
+                <br/> {{ cert.certific_no.client_id.client_nam }} <br/>
+              <br/> {{ cert.location_idd.address1 }}
+               <br/>{{ cert.location_idd.address2 }}
+                <br/> {{ cert.location_idd.city }}
+                <br/>{{ cert.location_idd.state }}
+                <br/>{{ cert.location_idd.country }}
+                <br/>
+                <br/>
+
+
+            </td>
+
+          </tr>
+
+        <tr>
+            <br/>
+          <td style="text-align: center"><strong>Certificate Number: </strong></td>
+          <td style="text-align: center">
+              <br/>
+              {{ cert.certific_no }}
+              <br/>
+              <br/>
+          </td>
+        </tr>
+
+          <tr>
+          <td style="text-align: center"><strong>Contact Name: </strong></td>
+              <td style="text-align: center"><br/>{{ cert.certific_no.contact_name }}<br/>  <br/></td>
+        </tr>
+          <tr>
+            <td style="text-align: center"><strong>Test Report Number:</strong></td>
+              <td style="text-align: center"><br/>{{ cert.certific_no }}<br/><br/></td>
+          </tr>
+       <tr>
+            <td style="text-align: center"><strong> Manufacturing Plant </strong></td>
+            <td style="text-align: center">
+                {% for manu_loc in manu_location %}
+              {{ manu_loc.name}}<br/>
+              {{ manu_loc.address1}}<br/>
+              {{ manu_loc.address2}}<br/>
+              {{ manu_loc.city}}<br/>
+              {{ manu_loc.state}}<br/>
+              {{ manu_loc.country}}<br/>
+              {{ manu_loc.zip}}<br/>
+                  <br/>
+                  <br/>
+                  <br/>
+
+              {% endfor %}<br/><br/>
+
+
+            </td>
+
+          </tr>
+        <tr>
+          <td style="text-align: center"><strong>Certified Product: </strong></td>
+          <td style="text-align: center"><br/>
+           {% for product in products %}
+              {{ product.prod }}<br/>
+              {% endfor %}<br/><br/>
+          </td>
+        </tr>
+           <tr>
+            <td style="text-align: center"><strong>Fulfilled Standards: </strong></td>
+            <td style="text-align: center"><br/>{{ cert.certific_no.test_std }}<br/><br/></td>
+          </tr>
+        <tr>
+          <td style="text-align: center"><strong>Date of Issue: </strong></td>
+          <td style="text-align: center">
+               <br/> {{ cert.certific_no.issue_date }}<br/><br/>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td width="25%" style="text-align: center"><strong>Product Type: </strong></td>
+          <td style="text-align: center"><br/> {{ cert.prod.type }}<br/><br/></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+
+
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br/>
+<br/>
+<hr/>
+ <!-- Footer -->
+       <footer style="align-content: center; padding: 10px; ">
+            <p style="text-align: center"><a href="/homepage/site_map"> Site Map</a> &#124; <a href="/homepage/terms_conditions">Terms &amp; Conditions</a> &#124; <a href="/homepage/privacy">Privacy Policy</a> &#124; Copyright &copy; 2019</p>
+        </footer>
+</body>
+</html>
